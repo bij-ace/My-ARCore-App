@@ -25,6 +25,7 @@ import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.FrameTime;
 import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.assets.RenderableSource;
+import com.google.ar.sceneform.rendering.MaterialFactory;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.ux.ArFragment;
@@ -249,6 +250,11 @@ public class MainActivity extends AppCompatActivity {
                     dialog.show();
                     return null;
                 }));
+
+        // MODIFY RENDERABLES AT RUNTIME
+//        blueSphereRenderable = redSphereRenderable.makeCopy();
+//        blueSphereRenderable.getMaterial().setFloat3(
+//                MaterialFactory.MATERIAL_COLOR, new Color(android.graphics.Color.BLUE));
 
     }
 
