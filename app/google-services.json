@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "71101618686",
+    "firebase_url": "https://my-ar-app.firebaseio.com",
+    "project_id": "my-ar-app",
+    "storage_bucket": "my-ar-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71101618686:android:0be99ec996258518",
+        "android_client_info": {
+          "package_name": "com.a711.bshre032.myarapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71101618686-dn6ephlk90hqqmci38m33pljrm2ecgqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo38o2a47794lsCk7KZpLUVH1AYjLe5pI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
