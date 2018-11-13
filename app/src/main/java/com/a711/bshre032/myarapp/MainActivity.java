@@ -24,6 +24,7 @@ import com.google.ar.core.TrackingState;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.FrameTime;
 import com.google.ar.sceneform.Node;
+import com.google.ar.sceneform.assets.RenderableSource;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.ux.ArFragment;
@@ -223,9 +224,21 @@ public class MainActivity extends AppCompatActivity {
         snackbarHelper.hide(this);
     }
 
+    private static final String GLTF_ASSET =
+            "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf";
+
     private void placeObject(ArFragment fragment, Anchor anchor, Uri model) {
         ModelRenderable.builder()
                 .setSource(fragment.getContext(), model)
+                // TO LOAD ON RUNTIME USE THIS BLOCK OF CODE
+//                .setSource(this, RenderableSource.builder().setSource(
+//                        this,
+//                        Uri.parse(GLTF_ASSET),
+//                        RenderableSource.SourceType.GLTF2)
+//                        .setScale(0.5f)  // Scale the original model to 50%.
+//                        .setRecenterMode(RenderableSource.RecenterMode.ROOT)
+//                        .build())
+//                .setRegistryId(GLTF_ASSET)
                 .build()
                 .thenAccept(renderable -> addNodeToScene(fragment, anchor, renderable))
                 .exceptionally((throwable -> {
